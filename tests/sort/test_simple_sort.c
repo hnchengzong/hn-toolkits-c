@@ -10,7 +10,8 @@ int main() {
   const int length = sizeof(test_sort) / sizeof(test_sort[0]);
 
   char input[20] = "\0";
-  fprintf(stdout, "Enter simple_sort method (bubble/selection/insertion): \n");
+  fprintf(stdout,
+          "Enter simple_sort method (bubble/selection/insertion/shell): \n");
   scanf("%19s", input);
 
   if (strcmp(input, "bubble") != 0 && strcmp(input, "selection") != 0 &&
