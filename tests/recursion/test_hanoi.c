@@ -1,4 +1,4 @@
-#include "../include/hanoi/hanoi.h"
+#include "../include/recursion/hanoi.h"
 
 int main(void) {
   hanoi(3, 'A', 'B', 'C');

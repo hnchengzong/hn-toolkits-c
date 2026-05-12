@@ -1,10 +1,11 @@
 #include "../include/sort/simple_sort.h"
+#include "sort/hn_swap.h"
 
 void bubble_sort(int *arr, int length) {
   for (auto i = 0; i < length; i++) {
     for (auto j = 0; j < length - i - 1; j++) {
       if (arr[j] > arr[j + 1]) {
-        swap(arr[j], arr[j + 1]);
+        SWAP(arr[j], arr[j + 1]);
       }
     }
   }
@@ -18,7 +19,7 @@ void selection_sort(int *arr, int length) {
         min = j;
       }
     }
-    swap(arr[i], arr[min]);
+    SWAP(arr[i], arr[min]);
   }
 }
 

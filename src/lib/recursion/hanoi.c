@@ -1,4 +1,4 @@
-#include "../include/hanoi/hanoi.h"
+#include "../include/recursion/hanoi.h"
 
 #include <stddef.h>
 #include <stdio.h>
