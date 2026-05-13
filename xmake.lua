@@ -1,5 +1,5 @@
 set_project("hn-toolkits")
-set_version("0.2.0")
+set_version("0.2.1")
 
 set_languages("c23") -- 使用一些C23的新特性，如auto自动推导等。
 set_toolchains("clang")
