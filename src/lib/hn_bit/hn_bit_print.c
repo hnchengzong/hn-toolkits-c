@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include <string.h>
 
-static inline size_t hn_bit_bin_to_str_generic(char *buf, size_t buf_size,
-                                               uint64_t val, int bits,
-                                               int flags) {
+static inline size_t hn_bit_bin_to_str_generic(char *restrict buf,
+                                               size_t buf_size, uint64_t val,
+                                               int bits, int flags) {
   if (!buf || buf_size == 0)
     return 0;
 
@@ -62,21 +62,22 @@ done:
   return (size_t)(ptr - buf);
 }
 
-size_t hn_bit_bin_to_str8(char *buf, size_t buf_size, uint8_t val, int flags) {
+size_t hn_bit_bin_to_str8(char *restrict buf, size_t buf_size, uint8_t val,
+                          int flags) {
   return hn_bit_bin_to_str_generic(buf, buf_size, val, 8, flags);
 }
 
-size_t hn_bit_bin_to_str16(char *buf, size_t buf_size, uint16_t val,
+size_t hn_bit_bin_to_str16(char *restrict buf, size_t buf_size, uint16_t val,
                            int flags) {
   return hn_bit_bin_to_str_generic(buf, buf_size, val, 16, flags);
 }
 
-size_t hn_bit_bin_to_str32(char *buf, size_t buf_size, uint32_t val,
+size_t hn_bit_bin_to_str32(char *restrict buf, size_t buf_size, uint32_t val,
                            int flags) {
   return hn_bit_bin_to_str_generic(buf, buf_size, val, 32, flags);
 }
 
-size_t hn_bit_bin_to_str64(char *buf, size_t buf_size, uint64_t val,
+size_t hn_bit_bin_to_str64(char *restrict buf, size_t buf_size, uint64_t val,
                            int flags) {
   return hn_bit_bin_to_str_generic(buf, buf_size, val, 64, flags);
 }

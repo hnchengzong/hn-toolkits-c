@@ -5,10 +5,21 @@
 #include <stdint.h>
 #include <stdio.h>
 
+#ifndef HN_BIN_NO_LEADING_ZEROS
 #define HN_BIN_NO_LEADING_ZEROS 0x01
+#endif
+
+#ifndef HN_BIN_SPACE_4
 #define HN_BIN_SPACE_4 0x02
+#endif
+
+#ifndef HN_BIN_SPACE_8
 #define HN_BIN_SPACE_8 0x04
+#endif
+
+#ifndef HN_BIN_PREFIX_0B
 #define HN_BIN_PREFIX_0B 0x08
+#endif
 
 #define hn_bit_print_bin(val, flags)                                           \
   _Generic((val),                                                              \

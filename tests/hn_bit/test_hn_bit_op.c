@@ -12,7 +12,7 @@ int main(void) {
   a = hn_bit_clr(a, 3);
   hn_bit_print_bin8(a, 0);
 
-  uint32_t b = 0x12345678;
+  const uint32_t b = 0x12345678;
   hn_bit_print_bin32(b, 0);
 
   return 0;

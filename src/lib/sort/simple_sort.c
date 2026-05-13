@@ -1,7 +1,7 @@
 #include "../include/sort/simple_sort.h"
 #include "sort/hn_swap.h"
 
-void bubble_sort(int *arr, int length) {
+void bubble_sort(int *restrict arr, int length) {
   for (auto i = 0; i < length; i++) {
     for (auto j = 0; j < length - i - 1; j++) {
       if (arr[j] > arr[j + 1]) {
@@ -11,7 +11,7 @@ void bubble_sort(int *arr, int length) {
   }
 }
 
-void selection_sort(int *arr, int length) {
+void selection_sort(int *restrict arr, int length) {
   for (auto i = 0; i < length - 1; i++) {
     int min = i;
     for (auto j = i + 1; j < length; j++) {
@@ -23,7 +23,7 @@ void selection_sort(int *arr, int length) {
   }
 }
 
-void insertion_sort(int *arr, int length) {
+void insertion_sort(int *restrict arr, int length) {
   for (auto i = 1; i < length; i++) {
     int key = arr[i];
     int j = i - 1;
@@ -35,7 +35,7 @@ void insertion_sort(int *arr, int length) {
   }
 }
 
-void shell_sort(int *arr, int length) {
+void shell_sort(int *restrict arr, int length) {
   for (auto gap = length / 2; gap > 0; gap /= 2) {
     for (auto i = gap; i < length; i++) {
       int temp = arr[i];

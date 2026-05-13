@@ -1,11 +1,13 @@
 #pragma once
 
+#ifndef SWAP
 #define SWAP(a, b)                                                             \
   do {                                                                         \
     typeof(a) ____tmp = (a);                                                   \
     (a) = (b);                                                                 \
     (b) = ____tmp;                                                             \
   } while (0)
+#endif
 
 #include <string.h>
 

@@ -18,6 +18,6 @@ int main(void) {
   u64 x = 10;
   fprintf(stdout, "x: %lu\n", x);
   const u64 y = hn_clamp(x, 5, 20);
-  fprintf(stdout, "Clamped: %d\n", y);
+  fprintf(stdout, "Clamped: %lu\n", y);
   return 0;
 }

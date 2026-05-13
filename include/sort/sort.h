@@ -2,8 +2,8 @@
 #ifndef SORT_H
 #define SORT_H
 
-void merge_sort(int *arr, int length);
-void quick_sort(int *arr, int length);
-void heap_sort(int *arr, int length);
+extern void merge_sort(int *restrict arr, int length);
+extern void quick_sort(int *restrict arr, int length);
+extern void heap_sort(int *restrict arr, int length);
 
 #endif
