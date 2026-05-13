@@ -15,7 +15,10 @@
 git clone --depth 1 https://github.com/hnchengzong/hn-toolkits-c.git
 cd ./hn-toolkits-c
 
-# 构建
+# 在VSCode中生成配置文件
+xmake project -k compile_commands
+
+# 构建(只有主程序)
 xmake build
 
 # 构建并运行主程序main.c

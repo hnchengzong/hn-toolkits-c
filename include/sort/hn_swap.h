@@ -2,9 +2,9 @@
 
 #define SWAP(a, b)                                                             \
   do {                                                                         \
-    typeof(a) _tmp = (a);                                                      \
+    typeof(a) ____tmp = (a);                                                   \
     (a) = (b);                                                                 \
-    (b) = _tmp;                                                                \
+    (b) = ____tmp;                                                             \
   } while (0)
 
 #include <string.h>
