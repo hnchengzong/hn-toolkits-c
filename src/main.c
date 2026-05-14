@@ -1,4 +1,4 @@
-#include "test.h"
+#include "foo.h"
 #include <assert.h>
 #include <stdio.h>
 
