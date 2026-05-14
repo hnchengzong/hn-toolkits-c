@@ -2,7 +2,7 @@
 #include "sort/hn_swap.h"
 
 void bubble_sort(int *restrict arr, int length) {
-  for (auto i = 0; i < length; i++) {
+  for (auto i = 0; i < length; i++) { // C23特性
     for (auto j = 0; j < length - i - 1; j++) {
       if (arr[j] > arr[j + 1]) {
         SWAP(arr[j], arr[j + 1]);

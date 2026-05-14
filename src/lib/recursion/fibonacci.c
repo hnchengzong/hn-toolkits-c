@@ -21,7 +21,7 @@ size_t fib_iter(size_t n) {
 }
 
 size_t fib_seq(size_t a1, size_t a2, size_t n) {
-  if (n == 0)
+  if (n <= 0)
     return 0;
   if (n == 1)
     return a1;

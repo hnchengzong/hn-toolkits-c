@@ -9,11 +9,11 @@ int main(void) {
   const int length = sizeof(test_sort) / sizeof(test_sort[0]);
 
   char input[20] = "\0";
-  fprintf(stdout, "Enter sort method (merge/quick): \n");
+  fprintf(stdout, "Enter sort method (merge/quick/heap): \n");
   scanf("%19s", input);
 
   if (strcmp(input, "merge") != 0 && strcmp(input, "quick") != 0 &&
-      strcmp(input, "heap") != 0) {
+      strcmp(input, "heap") != 0 && strcmp(input, "bubble") != 0) {
     fprintf(stderr, "Unknown sort method: %s\n", input);
     return 1;
   }

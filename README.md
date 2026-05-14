@@ -31,7 +31,12 @@ xmake run test_name # e.g. xmake run test_simple_sort
 xmake f -m debug
 xmake f -m release
 
-# 构建动态链接库，在build/lib
+# 构建动态链接库，在build/lib中
 xmake build hn-toolkits-lib
 
 ```
+
+## 项目结构
+
+`include`存放各种头文件；`src/lib`是对头文件的实现；`tests`是相应库的测试文件。
+默认构建到`build`中，`tests`的文件被构建到`build/tests`中，分为`debug`和`release`两个文件夹。构建的动态链接库在`build/lib`中。
