@@ -18,3 +18,13 @@ static inline void swap(void *restrict a, void *restrict b,
   memcpy(a, b, byte_length);
   memcpy(b, buf, byte_length);
 }
+
+static inline void swap_int_xor(int *a, int *b) {
+  if (a == b) {
+    return;
+  }
+  *a ^= *b;
+  *b ^= *a;
+  *a ^= *b;
+} /* performance may not be better because the compiler can optimize the swap
+     function that uses a temp variable */
