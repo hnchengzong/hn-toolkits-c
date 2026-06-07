@@ -25,6 +25,9 @@ void *mem_pool_alloc(mem_pool *pool, size_t size) {
   }
   size_t aligned_size =
       (size + MEM_POOL_ALIGNMENT - 1) & ~(MEM_POOL_ALIGNMENT - 1);
+  if (aligned_size > MEM_POOL_BLOCK_SIZE) {
+    return NULL;
+  }
   if (pool->current->used + aligned_size > MEM_POOL_BLOCK_SIZE) {
     mem_pool_block *new_block = malloc(sizeof(mem_pool_block));
     if (!new_block) {
